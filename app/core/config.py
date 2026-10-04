@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     app_name: str = "Currency Dashboard API"
-    database_url: str = DATABASE_URL
+    database_url: str = "postgresql+psycopg://app:app@localhost:5432/currency"
     frankfurter_base_url: str = "https://api.frankfurter.dev"
     http_timeout_seconds: float = 10.0
 
